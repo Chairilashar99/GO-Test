@@ -9,6 +9,17 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+//Before After Test: tdk peduli unit testnya success dan gagal before & after tetap di eksekusi
+func TestMain(m *testing.M) {
+	//before
+	fmt.Println("BEFORE UNIT TEST")
+
+	m.Run()
+
+	//after
+	fmt.Println("AFTER UNIT TEST")
+}
+
 //Skip test
 func TestSkip(t *testing.T) {
 	if runtime.GOOS == "linux" {
