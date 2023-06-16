@@ -9,6 +9,18 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+//Sub Test
+func TestSubTest(t *testing.T) {
+	t.Run("Heril", func(t *testing.T) {
+		result := HelloWorld("Heril")
+		require.Equal(t, "Hello Heril", result, "Result must be 'Hello Heril'")
+	})
+	t.Run("Ashar", func(t *testing.T) {
+		result := HelloWorld("Ashar")
+		require.Equal(t, "Hello Ashar", result, "Result must be 'Hello Ashar'")
+	})
+}
+
 //Before After Test: tdk peduli unit testnya success dan gagal before & after tetap di eksekusi
 func TestMain(m *testing.M) {
 	//before
